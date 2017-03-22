@@ -1,11 +1,30 @@
-/*h1 {
-	font-family: impact;
-}
-
-body {
-	background-color: #4286f4;
-}*/
-
-p {
+p, div {
 	font-size: 20px;
 }
+
+/*#randomValue {
+	background-color: green;
+	height: 100px;
+	width: 100px;
+}
+
+#userScore {
+	background-color: orange;
+	height: 150px;
+	width: 100px;
+}
+
+#winsCounter {
+	background-color: blue;
+	height: 100px;
+	width: 100px;
+
+}
+
+#lossCounter {
+
+background-color: red;
+	height: 100px;
+	width: 100px;
+
+}*/

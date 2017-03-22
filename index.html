@@ -1,41 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Crystal Game</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cyborg/bootstrap.min.css">
-	<link rel="stylesheet" href="crystal_game_hw.css">
-	<script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Crystal Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cyborg/bootstrap.min.css">
+    <link rel="stylesheet" href="crystal_game_hw.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 </head>
+
 <body>
-	
-	<h1> Crystal Game</h1>
-<p id="instructions"> Click the four squares below to get the value! </p>
-	
-
-	<div id=components>
-		<img id="pic1"  src="gamePiece1.png"></img>
-		 <img id="pic2" src="gamePiece2.png"></img>
-		 <img id="pic3" src="gamePiece3.png"></img>
-		 <img id="pic4" src="gamePiece4.png"></img>
-	</div>
-
-	<div id="value">
-		<p> Random Value: </p>
-	</div>
-
-	<div id="userScore"> 
-	<p> Your Score: </p>
-	</div>
-
-	<div id="results">
-		<p id="winsCounter"> 0 </p>
-		<p id="lossCounter"> 0 </p>
-	</div>
-
-	<script src="crystal_game_hw.js"> </script>
+    <h1> Crystal Game</h1>
+    <p id="instructions"> Click the four squares below to add up to the value! </p>
+    <div id="randomValue"> Random Value:
+        <span id="value"> 0 </span>
+    </div>
+    <div id=components>
+        <img id="pic1" data-id='0' class='pic' src="gamePiece1.png"></img>
+        <img id="pic2" data-id='1' class='pic' src="gamePiece2.png"></img>
+        <img id="pic3" data-id='2' class='pic' src="gamePiece3.png"></img>
+        <img id="pic4" data-id='3' class='pic' src="gamePiece4.png"></img>
+    </div>
+    <div id="userScore">
+        Your Total Score: <span id="userScoreValue">0</span> </p>
+    </div>
+    <div id="results">
+        <p> Wins: <span id="winsCounter"> 0 </span> </p>
+        <p> Losses: <span id="lossCounter"> 0 </span> </p>
+    </div>
+    <script src="crystal_game_hw.js">
+    </script>
 </body>
+
 </html>
