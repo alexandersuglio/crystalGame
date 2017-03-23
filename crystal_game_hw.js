@@ -7,7 +7,62 @@ for (var i = 0; i < picResult.length; i++) {
     console.log(picResult[i]);
 };
 
-// var picReset = [Math.floor(Math.random() * 10 + 1), Math.floor(Math.random() * 10 + 1), Math.floor(Math.random() * 10 + 1), Math.floor(Math.random() * 10 + 1), ];
+var userCounter = 0,
+    wins = 0,
+    losses = 0;
+
+ var intervalSum;
+
+
+function reset() {
+
+    targetResult = Math.floor(Math.random() * 50 + 10);
+    $("#value").text(targetResult);
+    // $("#userScoreValue").text(resetIntervalSum = 0);
+    userCounter = 0;
+    $("#userScoreValue").text(userCounter);
+};
+
+
+$('.pic').click(function() {
+
+    var id = $(this).data("id")
+
+
+ intervalSum = userCounter += picResult[id];
+
+
+    $("#userScoreValue").text(intervalSum);
+
+    if (intervalSum > targetResult) {
+        alert(intervalSum + " You went over!");
+        losses++;
+        $("#lossCounter").text(losses);
+        reset();
+        console.log(targetResult);
+        // redo();
+
+    };
+
+    if (intervalSum == targetResult) {
+        console.log(targetResult)
+        alert("You win!");
+        wins++;
+        $("#winsCounter").text(wins);
+        reset();
+        // redo();
+    };
+
+
+
+});
+
+
+
+////////////////////////// I DIDN'T DELETE THIS STUFF BECAUSE IT'S ANOTHER WAY TO DO THE FUNCTION ///////////////////////////////
+
+
+ // var picReset = [Math.floor(Math.random() * 10 + 1), Math.floor(Math.random() * 10 + 1), Math.floor(Math.random() * 10 + 1), Math.floor(Math.random() * 10 + 1), ];
 
 // for (var j = 0; j < picResult.length; j++) {
 //     console.log(picResult[j]);
@@ -18,11 +73,7 @@ for (var i = 0; i < picResult.length; i++) {
 //     pic3Result = Math.floor(Math.random() * 10 + 1),
 //     pic4Result = Math.floor(Math.random() * 10 + 1);
 
-var userCounter = 0,
-    wins = 0,
-    losses = 0;
 
- var intervalSum;
 // var pic1input, pic2input, pic3input, pic4input;
 
 // var resetIntervalSum;
@@ -45,14 +96,6 @@ var userCounter = 0,
 //     pic1Reset,
 //     resetIntervalSum;
 
-function reset() {
-
-    targetResult = Math.floor(Math.random() * 50 + 10);
-    $("#value").text(targetResult);
-    // $("#userScoreValue").text(resetIntervalSum = 0);
-    userCounter = 0;
-    $("#userScoreValue").text(userCounter);
-};
 
 
 
@@ -160,38 +203,6 @@ function reset() {
 // });
 
 
-$('.pic').click(function() {
-
-    var id = $(this).data("id")
-
-
- intervalSum = userCounter += picResult[id];
-
-
-    $("#userScoreValue").text(intervalSum);
-
-    if (intervalSum > targetResult) {
-        alert(intervalSum + " You went over!");
-        losses++;
-        $("#lossCounter").text(losses);
-        reset();
-        console.log(targetResult);
-        // redo();
-
-    };
-
-    if (intervalSum == targetResult) {
-        console.log(targetResult)
-        alert("You win!");
-        wins++;
-        $("#winsCounter").text(wins);
-        reset();
-        // redo();
-    };
-
-
-
-});
 
 ////////////////////////////////////////////////////////////////////
 
